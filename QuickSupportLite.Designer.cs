@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuickSupportLite));
             this.bafButton = new System.Windows.Forms.Button();
             this.clupButton = new System.Windows.Forms.Button();
             this.apciFixButton = new System.Windows.Forms.Button();
@@ -68,6 +69,7 @@
             this.bafButton.TabIndex = 0;
             this.bafButton.Text = "BAF";
             this.bafButton.UseVisualStyleBackColor = true;
+            this.bafButton.Click += new System.EventHandler(this.bafButton_Click);
             // 
             // clupButton
             // 
@@ -77,6 +79,7 @@
             this.clupButton.TabIndex = 1;
             this.clupButton.Text = "CLUP";
             this.clupButton.UseVisualStyleBackColor = true;
+            this.clupButton.Click += new System.EventHandler(this.clupButton_Click);
             // 
             // apciFixButton
             // 
@@ -86,6 +89,7 @@
             this.apciFixButton.TabIndex = 3;
             this.apciFixButton.Text = "APCI";
             this.apciFixButton.UseVisualStyleBackColor = true;
+            this.apciFixButton.Click += new System.EventHandler(this.apciFixButton_Click);
             // 
             // wafButton
             // 
@@ -95,6 +99,7 @@
             this.wafButton.TabIndex = 4;
             this.wafButton.Text = "WAF";
             this.wafButton.UseVisualStyleBackColor = true;
+            this.wafButton.Click += new System.EventHandler(this.wafButton_Click);
             // 
             // rootElementButton
             // 
@@ -104,6 +109,7 @@
             this.rootElementButton.TabIndex = 5;
             this.rootElementButton.Text = "Root Element";
             this.rootElementButton.UseVisualStyleBackColor = true;
+            this.rootElementButton.Click += new System.EventHandler(this.rootElementButton_Click);
             // 
             // baldoLocalButton
             // 
@@ -113,6 +119,7 @@
             this.baldoLocalButton.TabIndex = 6;
             this.baldoLocalButton.Text = "BaldoLocal";
             this.baldoLocalButton.UseVisualStyleBackColor = true;
+            this.baldoLocalButton.Click += new System.EventHandler(this.baldoLocalButton_Click);
             // 
             // logFolderButton
             // 
@@ -122,6 +129,7 @@
             this.logFolderButton.TabIndex = 7;
             this.logFolderButton.Text = "Log Folder";
             this.logFolderButton.UseVisualStyleBackColor = true;
+            this.logFolderButton.Click += new System.EventHandler(this.logFolderButton_Click);
             // 
             // apciFolderButton
             // 
@@ -131,6 +139,7 @@
             this.apciFolderButton.TabIndex = 8;
             this.apciFolderButton.Text = "APCI Folder";
             this.apciFolderButton.UseVisualStyleBackColor = true;
+            this.apciFolderButton.Click += new System.EventHandler(this.apciFolderButton_Click);
             // 
             // appwizButton
             // 
@@ -140,6 +149,7 @@
             this.appwizButton.TabIndex = 9;
             this.appwizButton.Text = "AppWiz";
             this.appwizButton.UseVisualStyleBackColor = true;
+            this.appwizButton.Click += new System.EventHandler(this.appwizButton_Click);
             // 
             // groupBox1
             // 
@@ -158,6 +168,7 @@
             // 
             // fidoStatusIcon
             // 
+            this.fidoStatusIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.fidoStatusIcon.Location = new System.Drawing.Point(383, 62);
             this.fidoStatusIcon.Name = "fidoStatusIcon";
             this.fidoStatusIcon.Size = new System.Drawing.Size(93, 83);
@@ -166,6 +177,7 @@
             // 
             // clupStatusIcon
             // 
+            this.clupStatusIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.clupStatusIcon.Location = new System.Drawing.Point(210, 62);
             this.clupStatusIcon.Name = "clupStatusIcon";
             this.clupStatusIcon.Size = new System.Drawing.Size(93, 83);
@@ -174,6 +186,7 @@
             // 
             // serviceStatusIcon
             // 
+            this.serviceStatusIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.serviceStatusIcon.Location = new System.Drawing.Point(44, 62);
             this.serviceStatusIcon.Name = "serviceStatusIcon";
             this.serviceStatusIcon.Size = new System.Drawing.Size(93, 83);
@@ -188,6 +201,7 @@
             this.fidoButton.TabIndex = 2;
             this.fidoButton.Text = "FIDO";
             this.fidoButton.UseVisualStyleBackColor = true;
+            this.fidoButton.Click += new System.EventHandler(this.fidoButton_Click);
             // 
             // groupBox2
             // 
@@ -221,6 +235,7 @@
             this.servicesButton.TabIndex = 13;
             this.servicesButton.Text = "Services";
             this.servicesButton.UseVisualStyleBackColor = true;
+            this.servicesButton.Click += new System.EventHandler(this.servicesButton_Click);
             // 
             // systemInfoButton
             // 
@@ -230,6 +245,7 @@
             this.systemInfoButton.TabIndex = 14;
             this.systemInfoButton.Text = "System Info";
             this.systemInfoButton.UseVisualStyleBackColor = true;
+            this.systemInfoButton.Click += new System.EventHandler(this.systemInfoButton_Click);
             // 
             // groupBox4
             // 
@@ -243,17 +259,33 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "System Components";
             // 
+            // serviceStatusTimer
+            // 
+            this.serviceStatusTimer.Tick += new System.EventHandler(this.serviceStatusTimer_Tick);
+            // 
+            // clupStatusTimer
+            // 
+            this.clupStatusTimer.Tick += new System.EventHandler(this.clupStatusTimer_Tick);
+            // 
+            // fidoStatusTimer
+            // 
+            this.fidoStatusTimer.Tick += new System.EventHandler(this.fidoStatusTimer_Tick);
+            // 
             // QuickSupportLite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 969);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(585, 969);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "QuickSupportLite";
             this.Text = "QuickSupport Lite";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fidoStatusIcon)).EndInit();
