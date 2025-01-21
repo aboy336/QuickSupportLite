@@ -51,8 +51,8 @@ namespace QuickSupportLite
         private void Form1_Load(object sender, EventArgs e)
         {
             // QuickSupport Lite Version
-            var version = Assembly.GetExecutingAssembly().GetName().Version;
-            quickSupportLiteVersion.Text = $"QuickSupprt Lite Version: {version}";
+            //var version = Assembly.GetExecutingAssembly().GetName().Version;
+            //quickSupportLiteVersion.Text = $"QuickSupprt Lite Version: {version}";
 
             // TechTool Version
             string programName = "Tech Tool"; // Tech Tool Name Indicated on PC
