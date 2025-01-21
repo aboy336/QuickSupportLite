@@ -7,6 +7,8 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Management;
+using System.Reflection;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,7 +50,41 @@ namespace QuickSupportLite
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // QuickSupport Lite Version
+            var version = Assembly.GetExecutingAssembly().GetName().Version;
+            quickSupportLiteVersion.Text = $"QuickSupprt Lite Version: {version}";
 
+            // TechTool Version
+            string programName = "Tech Tool"; // Tech Tool Name Indicated on PC
+            string techToolVersion = GetProgramVersion(programName);
+            if (!string.IsNullOrEmpty(techToolVersion))
+            {
+                techToolVersionLabel.Text = $"{programName} Version: {techToolVersion}";
+            }
+            else
+            {
+                techToolVersionLabel.Text = $"{programName} is not installed.";
+            }
+        }
+
+        private string GetProgramVersion(string programName)
+        {
+            try
+            {
+                string query = $"SELECT * FROM Win32_Product WHERE Name LIKE '{programName}%'";
+                using (ManagementObjectSearcher searcher = new ManagementObjectSearcher(query))
+                {
+                    foreach (ManagementObject obj in searcher.Get())
+                    {
+                        return obj["Version"]?.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while retrieving the program version: {ex.Message}");
+            }
+            return string.Empty;
         }
 
 
