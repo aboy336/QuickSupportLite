@@ -1,4 +1,5 @@
-﻿using QuickSupportLite.Properties;
+﻿using Microsoft.Win32;
+using QuickSupportLite.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,16 +68,31 @@ namespace QuickSupportLite
             }
         }
 
+
+        // Form1 Load "Get Tech Tool Version"
         private string GetProgramVersion(string programName)
         {
             try
             {
-                string query = $"SELECT * FROM Win32_Product WHERE Name LIKE '{programName}%'";
-                using (ManagementObjectSearcher searcher = new ManagementObjectSearcher(query))
+                string registryKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
+                using (RegistryKey key = Registry.LocalMachine.OpenSubKey(registryKey))
                 {
-                    foreach (ManagementObject obj in searcher.Get())
+                    if (key != null)
                     {
-                        return obj["Version"]?.ToString();
+                        foreach (string subkeyName in key.GetSubKeyNames())
+                        {
+                            using (RegistryKey subkey = key.OpenSubKey(subkeyName))
+                            {
+                                if (subkey != null)
+                                {
+                                    string displayName = subkey.GetValue("DisplayName") as string;
+                                    if (!string.IsNullOrEmpty(displayName) && displayName.Contains(programName))
+                                    {
+                                        return subkey.GetValue("DisplayVersion") as string;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
