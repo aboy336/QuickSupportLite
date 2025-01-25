@@ -74,7 +74,7 @@ namespace QuickSupportLite
         {
             try
             {
-                string registryKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
+                string registryKey = @"SOFTWARE\WOW6432Node\Volvo Information Technology\";
                 using (RegistryKey key = Registry.LocalMachine.OpenSubKey(registryKey))
                 {
                     if (key != null)
@@ -85,10 +85,10 @@ namespace QuickSupportLite
                             {
                                 if (subkey != null)
                                 {
-                                    string displayName = subkey.GetValue("DisplayName") as string;
-                                    if (!string.IsNullOrEmpty(displayName) && displayName.Contains(programName))
+                                    string displayName = subkey.GetValue("TechToolVersion") as string;
+                                    if (!string.IsNullOrEmpty(displayName))
                                     {
-                                        return subkey.GetValue("DisplayVersion") as string;
+                                        return subkey.GetValue("TechToolVersion") as string;
                                     }
                                 }
                             }
