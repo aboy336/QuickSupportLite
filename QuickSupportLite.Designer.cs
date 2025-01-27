@@ -73,19 +73,20 @@
             // bafButton
             // 
             this.bafButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.bafButton.Location = new System.Drawing.Point(6, 97);
+            this.bafButton.Location = new System.Drawing.Point(6, 82);
             this.bafButton.Name = "bafButton";
             this.bafButton.Size = new System.Drawing.Size(109, 40);
             this.bafButton.TabIndex = 0;
             this.bafButton.Text = "BAF";
-            this.bafTip.SetToolTip(this.bafButton, "BAF is the main TechTool Service. It takes awhile to load.\r\nTurn this off if you " + "are trying to fix any problems. ");
+            this.bafTip.SetToolTip(this.bafButton, "BAF is the main TechTool Service. It takes awhile to load.\r\nTurn this off if you " +
+        "are trying to fix any problems. ");
             this.bafButton.UseVisualStyleBackColor = false;
             this.bafButton.Click += new System.EventHandler(this.bafButton_Click);
             // 
             // clupButton
             // 
             this.clupButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.clupButton.Location = new System.Drawing.Point(121, 97);
+            this.clupButton.Location = new System.Drawing.Point(121, 82);
             this.clupButton.Name = "clupButton";
             this.clupButton.Size = new System.Drawing.Size(109, 40);
             this.clupButton.TabIndex = 1;
@@ -102,7 +103,9 @@
             this.apciFixButton.Size = new System.Drawing.Size(109, 40);
             this.apciFixButton.TabIndex = 3;
             this.apciFixButton.Text = "APCI";
-            this.apciResetTip.SetToolTip(this.apciFixButton, "APCI Repair is often used when trying to connect to a truck, \r\nthe connection cir" + "cle starts to read and disappears. \r\nIf this doesnt resolve connecting to a vehi" + "cle, please call support.");
+            this.apciResetTip.SetToolTip(this.apciFixButton, "APCI Repair is often used when trying to connect to a truck, \r\nthe connection cir" +
+        "cle starts to read and disappears. \r\nIf this doesnt resolve connecting to a vehi" +
+        "cle, please call support.");
             this.apciFixButton.UseVisualStyleBackColor = true;
             this.apciFixButton.Click += new System.EventHandler(this.apciFixButton_Click);
             // 
@@ -114,7 +117,9 @@
             this.wafButton.Size = new System.Drawing.Size(109, 40);
             this.wafButton.TabIndex = 4;
             this.wafButton.Text = "WAF";
-            this.wafTip.SetToolTip(this.wafButton, "WAF resets TechTool\'s adaptor settings. It is related to \r\nRoot Element and shoul" + "d be used together. \r\nUse this if you have recently switched adaptors and are \r\n" + "unable to connect to a vehicle. ");
+            this.wafTip.SetToolTip(this.wafButton, "WAF resets TechTool\'s adaptor settings. It is related to \r\nRoot Element and shoul" +
+        "d be used together. \r\nUse this if you have recently switched adaptors and are \r\n" +
+        "unable to connect to a vehicle. ");
             this.wafButton.UseVisualStyleBackColor = true;
             this.wafButton.Click += new System.EventHandler(this.wafButton_Click);
             // 
@@ -126,7 +131,9 @@
             this.rootElementButton.Size = new System.Drawing.Size(109, 40);
             this.rootElementButton.TabIndex = 5;
             this.rootElementButton.Text = "Root Element";
-            this.rootElementTip.SetToolTip(this.rootElementButton, "Root Element and WAF are often used together. \r\nThis resets TechTool\'s profile in" + "formation. If you\'ve switched\r\nadaptors or are unable to connect to a truck, run" + " this fix. ");
+            this.rootElementTip.SetToolTip(this.rootElementButton, "Root Element and WAF are often used together. \r\nThis resets TechTool\'s profile in" +
+        "formation. If you\'ve switched\r\nadaptors or are unable to connect to a truck, run" +
+        " this fix. ");
             this.rootElementButton.UseVisualStyleBackColor = true;
             this.rootElementButton.Click += new System.EventHandler(this.rootElementButton_Click);
             // 
@@ -138,7 +145,9 @@
             this.baldoLocalButton.Size = new System.Drawing.Size(109, 40);
             this.baldoLocalButton.TabIndex = 6;
             this.baldoLocalButton.Text = "BaldoLocal";
-            this.baldoLocalTip.SetToolTip(this.baldoLocalButton, "BaldoLocal is a database related to TechTool and being\r\nable to sign in to your U" + "serID.\r\nWhen  you see the error \"unable to synchronize user profile\"\r\nthis is th" + "e fix.");
+            this.baldoLocalTip.SetToolTip(this.baldoLocalButton, "BaldoLocal is a database related to TechTool and being\r\nable to sign in to your U" +
+        "serID.\r\nWhen  you see the error \"unable to synchronize user profile\"\r\nthis is th" +
+        "e fix.");
             this.baldoLocalButton.UseVisualStyleBackColor = true;
             this.baldoLocalButton.Click += new System.EventHandler(this.baldoLocalButton_Click);
             // 
@@ -159,7 +168,8 @@
             this.apciFolderButton.Size = new System.Drawing.Size(109, 40);
             this.apciFolderButton.TabIndex = 8;
             this.apciFolderButton.Text = "APCI Folder";
-            this.apciFolderTip.SetToolTip(this.apciFolderButton, "APCI Database folder. When you run the APCI fix, the \r\nfolder APCIPlus.Database.c" + "ache, will redownload.\r\nIt takes around 15-30 to redownload. ");
+            this.apciFolderTip.SetToolTip(this.apciFolderButton, "APCI Database folder. When you run the APCI fix, the \r\nfolder APCIPlus.Database.c" +
+        "ache, will redownload.\r\nIt takes around 15-30 to redownload. ");
             this.apciFolderButton.UseVisualStyleBackColor = true;
             this.apciFolderButton.Click += new System.EventHandler(this.apciFolderButton_Click);
             // 
@@ -181,9 +191,9 @@
             this.groupBox1.Controls.Add(this.fidoButton);
             this.groupBox1.Controls.Add(this.clupButton);
             this.groupBox1.Controls.Add(this.bafButton);
-            this.groupBox1.Location = new System.Drawing.Point(11, 36);
+            this.groupBox1.Location = new System.Drawing.Point(10, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(348, 154);
+            this.groupBox1.Size = new System.Drawing.Size(348, 129);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TechTool Services";
@@ -191,7 +201,7 @@
             // fidoStatusIcon
             // 
             this.fidoStatusIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.fidoStatusIcon.Location = new System.Drawing.Point(257, 40);
+            this.fidoStatusIcon.Location = new System.Drawing.Point(257, 25);
             this.fidoStatusIcon.Name = "fidoStatusIcon";
             this.fidoStatusIcon.Size = new System.Drawing.Size(61, 53);
             this.fidoStatusIcon.TabIndex = 5;
@@ -200,7 +210,7 @@
             // clupStatusIcon
             // 
             this.clupStatusIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.clupStatusIcon.Location = new System.Drawing.Point(141, 40);
+            this.clupStatusIcon.Location = new System.Drawing.Point(141, 25);
             this.clupStatusIcon.Name = "clupStatusIcon";
             this.clupStatusIcon.Size = new System.Drawing.Size(61, 53);
             this.clupStatusIcon.TabIndex = 4;
@@ -209,7 +219,7 @@
             // serviceStatusIcon
             // 
             this.serviceStatusIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.serviceStatusIcon.Location = new System.Drawing.Point(30, 40);
+            this.serviceStatusIcon.Location = new System.Drawing.Point(30, 25);
             this.serviceStatusIcon.Name = "serviceStatusIcon";
             this.serviceStatusIcon.Size = new System.Drawing.Size(61, 53);
             this.serviceStatusIcon.TabIndex = 3;
@@ -218,12 +228,14 @@
             // fidoButton
             // 
             this.fidoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.fidoButton.Location = new System.Drawing.Point(233, 97);
+            this.fidoButton.Location = new System.Drawing.Point(233, 82);
             this.fidoButton.Name = "fidoButton";
             this.fidoButton.Size = new System.Drawing.Size(109, 40);
             this.fidoButton.TabIndex = 2;
             this.fidoButton.Text = "FIDO";
-            this.fidoTip.SetToolTip(this.fidoButton, "FIDO is a service closely related to CLUP. If this is not running\r\nCLUP will not " + "update and Client Update will not work. \r\nThis service doesn\'t usually have prob" + "lems. ");
+            this.fidoTip.SetToolTip(this.fidoButton, "FIDO is a service closely related to CLUP. If this is not running\r\nCLUP will not " +
+        "update and Client Update will not work. \r\nThis service doesn\'t usually have prob" +
+        "lems. ");
             this.fidoButton.UseVisualStyleBackColor = false;
             this.fidoButton.Click += new System.EventHandler(this.fidoButton_Click);
             // 
@@ -234,7 +246,7 @@
             this.groupBox2.Controls.Add(this.wafButton);
             this.groupBox2.Controls.Add(this.apciFixButton);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.groupBox2.Location = new System.Drawing.Point(9, 195);
+            this.groupBox2.Location = new System.Drawing.Point(8, 161);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(350, 123);
             this.groupBox2.TabIndex = 11;
@@ -246,7 +258,7 @@
             this.groupBox3.Controls.Add(this.apciFolderButton);
             this.groupBox3.Controls.Add(this.logFolderButton);
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.groupBox3.Location = new System.Drawing.Point(9, 323);
+            this.groupBox3.Location = new System.Drawing.Point(8, 289);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(350, 84);
             this.groupBox3.TabIndex = 12;
@@ -279,7 +291,7 @@
             this.groupBox4.Controls.Add(this.servicesButton);
             this.groupBox4.Controls.Add(this.appwizButton);
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.groupBox4.Location = new System.Drawing.Point(9, 412);
+            this.groupBox4.Location = new System.Drawing.Point(8, 378);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(350, 84);
             this.groupBox4.TabIndex = 15;
@@ -315,7 +327,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(371, 507);
+            this.ClientSize = new System.Drawing.Size(371, 474);
             this.Controls.Add(this.techToolVersionLabel);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -336,6 +348,7 @@
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

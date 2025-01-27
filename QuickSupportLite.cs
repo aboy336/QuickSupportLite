@@ -353,7 +353,7 @@ namespace QuickSupportLite
             process.StartInfo = startInfo;
             Process.Start("cmd.exe", @"/c net stop volvotechtoolservicecontroller");
             Process.Start("cmd.exe", "/c del \"C:\\ProgramData\\Tech Tool\\baldolocal.db\"");
-            Process.Start("cmd.exe", "/c pause");
+            
         }
 
 
